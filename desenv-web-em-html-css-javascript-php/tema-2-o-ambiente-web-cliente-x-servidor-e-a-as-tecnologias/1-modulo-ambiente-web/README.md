@@ -4,7 +4,8 @@ Este projeto ilustra de forma simples o ciclo de requisição (request) e respos
 
 Aqui utilizamos uma página web dinâmica onde os usuários vêem um conteúdo personalizado após inserir os dados no formulário, nesse caso, nome e email.
 
-![Processo de solicitação (request) e resposta (response).](https://github.com/Fransuelton/engenharia-de-software/blob/exercicios-2-semestre/desenv-web-em-html-css-javascript-php/tema-2-o-ambiente-web-cliente-x-servidor-e-a-as-tecnologias/1-modulo-ambiente-web/src/images/processo-de-solicita%C3%A7%C3%A3o-e-resposta.jpg?raw=true)
+![Processo de solicitação (request) e resposta (response).](https://github.com/user-attachments/assets/2f6d233b-29c3-497d-aea6-26f8c95286e0)
+
 
 Os dados inseridos no formulário são enviados para o servidor, onde são processados e o servidor devolve uma resposta cotendo os códigos (HTML, CSS, PHP) que serão executados no próprio navegador.
 
