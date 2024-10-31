@@ -1,0 +1,1 @@
+Neste exercício foi demonstrado na prática como usar os recursos do CSS para alterar vários estilos de páginas HTML.
