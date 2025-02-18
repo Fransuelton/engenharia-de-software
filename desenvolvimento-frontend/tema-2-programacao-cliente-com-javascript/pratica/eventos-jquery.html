@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos com jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <a href="pagina.html" id="link">Link a ser clicado</a>
+
+
+    <script>
+        $(function () {
+            $("#link").on("click", function (event) {
+                event.preventDefault()
+                alert('Link clicado')
+            })
+        })
+    </script>
+</body>
+
+</html>
