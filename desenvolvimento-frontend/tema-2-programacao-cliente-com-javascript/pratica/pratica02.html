@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - Manipulando o DOM e o Conteúdo</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div id="div-one">
+        <h1 class="titulo">Título na primeira div</h1>
+
+        <p class="paragrafo">Texto inicial do parágrafo da primeira div.</p>
+    </div>
+
+    <script>
+
+        // html() - Adicionar/Alterar Conteúdo
+
+        $(".titulo").html("Título")
+
+        // Acessando o valor de um elemento
+
+        let variavel = $('.paragrafo').html()
+
+        // append() - Acrescentar conteúdo
+
+        $(".titulo").append(" do Trabalho")
+
+        // Adicionando elementos no DOM
+
+        $("#div-one").append('<p>Texto do parágrafo adicionado por jQuery.</p>')
+
+        // replaceWidth() - Substituir elementos
+
+        $(".titulo").replaceWith("<h3>Título jQuery</h3>")
+
+    </script>
+</body>
+
+</html>
