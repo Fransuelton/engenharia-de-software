@@ -14,8 +14,8 @@
 		$(function() {
 			$( '#lipsum' ).append("<a id='link_alerta' href='pagina.html'>Exibir alerta</a>");
 		
-			$('#_ _ _ _ _)')._ _ _ _ _('_ _ _ _ _', function(event){
-				_ _ _ _ _.preventDefault();
+			$('#link_alerta').on('click', function(event){
+				event.preventDefault();
 				alert('O novo link foi clicado');
 			});
 			
