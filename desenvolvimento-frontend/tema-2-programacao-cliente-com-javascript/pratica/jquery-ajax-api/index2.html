@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultando Usuários - Requisições AJAX com jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <h1>Consulta de usuários</h1>
+
+    <button type="button" id="btn">Consultar usuários</button>
+
+    <section class="users-container"></section>
+
+    <script>
+        $(function () {
+            $("#btn").on("click", function () {
+                $.ajax({
+                    url: "https://reqres.in/api/users?page=1",
+                    type: "get",
+                    beforeSend: function () {
+                        $("#users-container").html("Carregando...")
+                    }
+
+                }).done(function (result) {
+                    let usersList = result.data
+
+                    let usersTable = `
+                        <table border='1'>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>E-mail</th>
+                                    <th>Nome</th>
+                                    <th>Sobrenome</th>
+                                    <th>Avatar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    `;
+
+                    // Adiciona a estrutura da tabela à div
+                    $(".users-container").html(usersTable);
+
+                    $.each(usersList, function (index, value) {
+                        let avatar = value.avatar
+                        let email = value.email
+                        let first_name = value.first_name
+                        let last_name = value.last_name
+                        let id = value.id
+
+                        let usersRow = `
+                            <tr>
+                                <td>${id}</td>
+                                <td>${email}</td>
+                                <td>${first_name}</td>
+                                <td>${last_name}</td>
+                                <td><img src="${avatar}" alt="Avatar" width="50" height="50"></td>
+                            </tr>
+                        `;
+
+                        $(".users-container table tbody").append(usersRow);
+
+                    });
+
+                }).fail(function (jqXHR, textStatus, msg) {
+                    console.log("A requisição falhou! " + msg)
+                })
+            })
+
+        })
+    </script>
+</body>
+
+</html>
