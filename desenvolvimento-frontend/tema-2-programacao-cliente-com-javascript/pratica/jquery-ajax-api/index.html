@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX com jQuery e Recursos Remotos</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <form>
+        <label for="cep">CEP: </label>
+        <input type="text" name="cep" id="cep">
+        <input type="button" id="btn" value="Pesquisar">
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+        $(function () {
+            $('#btn').on("click", function () {
+                let cep = $('#cep').val()
+
+                $.ajax({
+                    url: `https://viacep.com.br/ws/${cep}/json/`,
+                    type: 'get',
+                    beforeSend: function () {
+                        $("#resultado").html("<p>Consultando CEP...</p>")
+                    }
+                }).done(function (result) {
+                    console.log(JSON.stringify(result))
+                    $("#resultado").html(`CEP: ${result.cep} <br> Logradouro: ${result.logradouro}`)
+                }).fail(function (jqXHR, textStatus, msg) {
+                    console.log('Ocorreu um erro: ' + msg)
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
