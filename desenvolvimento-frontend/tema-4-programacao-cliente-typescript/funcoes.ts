@@ -58,3 +58,28 @@ function fatorial(n: number): number {
 let numero: number = 5;
 let res_fat = fatorial(numero);
 console.log(`O fatorial de ${numero} é: ${res_fat}`);
+
+// Arrow Functions
+
+let soma_anom_ts_1 = (x: number, y: number): number => {
+  return x + y;
+}
+let soma_anom_ts_2 = (x: number, y: number):number => x + y;
+let c: number = 10; 
+let d: number = 20; 
+console.log(`Teste 01: a soma de ${c} com ${d} é: ${soma_anom_ts_1(c,d)}`);
+console.log(`Teste 02: a soma de ${c} com ${d} é: ${soma_anom_ts_2(c,d)}`);
+
+// RegEx
+
+function checar_padrao(par_padrao: RegExp, par_texto: string): string {
+  if(par_padrao.test(par_texto)){
+      return "Foi detectado o padrão dentro do texto"
+  }
+  return "Não foi detectado o padrão dentro do texto";
+}
+
+const texto_teste : string = "O objetivo desse texto é realizar testes";
+const padrao_regex : RegExp = /te/;
+let res_teste: string = checar_padrao(padrao_regex, texto_teste);
+console.log(`O resultado da execução do regex foi: ${res_teste}`);
