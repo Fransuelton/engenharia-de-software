@@ -9,6 +9,7 @@ Este repositório contém o material do curso de Programação Java para inician
 🧠 Decidi fazer esse curso para aprender a base da linguagem Java, antes de seguir na disciplina de **POO em Java** na faculdade.
 
 # 🧾 Conteúdo
+
 🕐 00:01:00 – Base da linguagem Java
 
 🧩 00:04:47 – O que é a JVM?
@@ -44,3 +45,21 @@ Este repositório contém o material do curso de Programação Java para inician
 🧬 01:30:26 – Herança e Polimorfismo
 
 🛑 01:46:00 – Tratamento de Exceções
+
+# Anotações
+
+- Java é independemente de plataforma, fortemente tipado, orientado a objetos e utiliza a JVM (Java virtual Machine) que transforma o código em bytecodes e não diretamente em linguagem de máquina como a linguagem C por exemplo
+
+Todo arquivo java é necessário declarar uma classe no arquivo
+
+o nome da classe é igual ao nome do arquivo (podemos declarar mais de uma classe em um arrquivo). ela tem que ser public
+
+## variaveis
+
+Tipo NomeDaVariavel = valor;
+
+int
+
+String
+
+também podemos declarar utilizando var ao invés do tipo, utilizando essa forma o próprio java vai inferir o valor daquela variável.
