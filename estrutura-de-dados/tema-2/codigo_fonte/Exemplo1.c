@@ -1,11 +1,13 @@
+// Ocorre a declaraÃ§Ã£o de variÃ¡veis globais (alocadas fora de uma funÃ§Ã£o) ou estÃ¡ticas (alocadas dentro de uma funÃ§Ã£o), usando o modificador static. Nesse caso, o valor alocado Ã  variÃ¡vel se mantÃ©m durante toda a vida do programa, exceto quando Ã© modificado explicitamente.
+
 #include <stdio.h>
 
-static  int a = 0;  // variável global, alocação estática
+static  int a = 0;  // variï¿½vel global, alocaï¿½ï¿½o estï¿½tica
 
 void incrementa(void)
 {
-int b = 0; // variável local, alocação automática
-static int c = 0; // variável local, alocação estática
+int b = 0; // variï¿½vel local, alocaï¿½ï¿½o automï¿½tica
+static int c = 0; // variï¿½vel local, alocaï¿½ï¿½o estï¿½tica
 
 printf ("a: %d, b: %d, c: %d\n", a, b, c);
 a++ ;

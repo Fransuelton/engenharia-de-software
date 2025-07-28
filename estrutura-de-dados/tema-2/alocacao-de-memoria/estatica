@@ -1,0 +1,18 @@
+//(geralmente aloca em DATA)
+
+// Usada para variáveis que permanecem na memória durante toda a execução do programa, como as variáveis globais.
+
+// Em C, ela e feita no segmento de dados, usada para variáveis globais e constantes. que precisam estar disponíveis em todo programa.
+
+#include <stdio.h>
+
+int valorGlobal = 20; // Variável estática
+
+void exibirValor(){
+    printf("Valor global: %d\n", valorGlobal);
+}
+
+int main(){
+    exibirValor();
+    return 0;
+}

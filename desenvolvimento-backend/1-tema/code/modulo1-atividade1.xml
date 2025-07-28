@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</Ffrom>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>
+
+<!--
+Anatomia de um XML, em relação a seus nós
+
+<root>
+  <child>
+    <subchild>...</subchild>
+  </child>
+</root>
+-->
