@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<products>
+    <product id="0">
+        <name>Logitech Mouse</name>
+        <price>10</price>
+        <category>Setup</category>
+    </product>
+    <product id="1">
+        <name>4K Smart TV</name>
+        <price>499</price>
+        <category>Home</category>
+    </product>
+    <product id="2">
+        <name>Macbook Air M1</name>
+        <price>1000</price>
+        <category>Setup</category>
+    </product>
+</products>
