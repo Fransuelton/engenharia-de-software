@@ -1,0 +1,28 @@
+{
+  "nota": {
+    "numero": 213432345,
+    "cliente": {
+      "nome": "João da Silva",
+      "cpf": "123.456.789-00",
+      "endereco": {
+        "rua": "Rua das Flores",
+        "numero": 123,
+        "bairro": "Centro",
+        "cidade": "São Paulo",
+        "estado": "SP"
+      }
+    },
+    "itens": [
+      {
+        "descricao": "Produto A",
+        "quantidade": 2,
+        "preco_unitario": 50.0
+      },
+      {
+        "descricao": "Produto B",
+        "quantidade": 1,
+        "preco_unitario": 100.0
+      }
+    ]
+  }
+}
