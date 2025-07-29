@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NF-es>
+    <NF-e>
+        <cabecalho>
+            <uf>RN</uf>
+            <descricao>Descrição</descricao>
+            <numero-de-serie>23</numero-de-serie>
+            <numero-da-nota>a</numero-da-nota>
+            <emissao>
+                <data>28/07/2025</data>
+                <hora>16:00</hora>
+            </emissao>
+        </cabecalho>
+        <emitente>
+            <cnpj>2465424432687</cnpj>
+            <nome>Fulano</nome>
+            <nome-fantasia>Empresa Fulano</nome-fantasia>
+            <inscricao-estadual>2832</inscricao-estadual>
+        </emitente>
+        <destinatario>
+            <cnpj>1232468757567</cnpj>
+            <nome>Ciclano</nome>
+            <email>ciclano@hotmail.com</email>
+            <endereco>
+                <logradouro></logradouro>
+                <numero></numero>
+                <bairro></bairro>
+                <municipio></municipio>
+                <uf></uf>
+                <cep></cep>
+                <pais></pais>
+                <telefone></telefone>
+            </endereco>
+        </destinatario>
+        <item numero="1">
+            <produto></produto>
+            <valor></valor>
+            <quantidade></quantidade>
+        </item>
+        <rodape>
+            <valor-total></valor-total>
+            <valor-icms></valor-icms>
+        </rodape>
+    </NF-e>
+</NF-es>
+
+
+<!-- No editor, crie um arquivo XML para transmissão de dados referentes a uma nota fiscal eletrônica.
+
+Em relação aos dados, a nota deverá ser composta por cinco seções:
+
+Cabeçalho
+Emitente
+Destinatário
+Item
+Rodapé
+
+Cabeçalho: UF, descrição da operação, número de série, número da nota fiscal e data/hora de emissão da nota.
+Emitente: CNPJ, nome, nome fantasia e inscrição estadual.
+Destinatário: CNPJ, nome, e-mail e endereço. Esta última será uma subseção, composta pelos seguintes dados: logradouro, número, bairro, município, UF, CEP, país e telefone.
+Item: número do item (considerando que a nota poderá conter mais de um produto, cada item deverá ter um atributo chamado número, cujo valor é a ordenação da inclusão do produto na nota. Ex.: 1, 2, 3...), produto, valor e quantidade.
+Rodapé: valor total e valor do ICMS.
+
+Após salvar o arquivo, com a extensão “.xml”, visualize-o no navegador.
+
+Por fim, utilizando uma ferramenta on-line, valide o formato do arquivo, para garantir que tudo está certo.-->
