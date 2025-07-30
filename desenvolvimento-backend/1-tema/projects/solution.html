@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+       <title>Requisições AJAX com JSON</title>
+</head>
+<body>
+<div id="resultado"></div>
+
+
+<script type="text/javascript">
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) { //Passando o resultado da requisição (o conteúdo     em XML) para a função manipulaXML
+            manipulaJSON(this);
+    }
+};
+xhttp.open("GET", "https://swapi.dev/api/people/1/", true);
+xhttp.send();
+
+/*
+Esta função recebe o JSON resultado da requisição AJAX.
+Após ler o conteúdo, faz o parse e inclui o contéudoconteúdo no elemento html de id #resultado
+*/
+function manipulaJSON(json) {
+	//recebendo o objeto contendo o retorno da API
+	//  e fazendo o PARSE do formato JSON para objeto Javascript
+	var jsonResponse = JSON.parse(json.responseText);
+	
+	//A partir do parse será possível acessar qualquer valor da string json 
+	//  como objeto JS. Ex: jsonResponse.name dá acesso à chave "name", constante
+	//  no retorno da API.
+	
+	//Criacao das variaveis, como tags HTML, que receberao os dados obtidos
+	var pessoa = "<h1>Personagem: " + jsonResponse.name + "</h1>"
+	var planetaOrigem = "<h2>Origem: " + jsonResponse.homeworld + "</h2>"
+	var content = pessoa + planetaOrigem;
+	
+	//Outros dados poderao ser incluidos na sequencia
+	
+	document.getElementById("resultado").innerHTML = content;
+}
+</script>
+</body>
+</html>
